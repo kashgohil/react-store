@@ -34,7 +34,7 @@ What's new:
 
 This doesn't handle the case of list
 
-What is meant by array is
+What is meant by list is
 
 ```
 const Comp = () => {
@@ -55,7 +55,7 @@ const App = () => {
 
 In the above example, only last `Comp` will be set in the `store`
 
-This is known limitation and vague idea for the solution is known, just not implemented as of now
+This is a known limitation and vague idea for the solution is known, just not implemented as of now
 
 ### On a Side Note: Why
 
