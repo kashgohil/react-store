@@ -30,6 +30,33 @@ What's new:
 - global state accessible through `getGlobalState`
 - params to give `stateName` for `globalState`
 
+### Note:
+
+This doesn't handle the case of list
+
+What is meant by array is
+
+```
+const Comp = () => {
+  const [getState, setState, globalState] = useState(initialValue, { stateId: 'RANDOM_ID' });
+  // component logic
+}
+
+const App = () => {
+  const listOfItems = [...listItems];
+
+  return (
+    <>
+    {_map(listOfItems, Comp)}
+    </>
+  )
+}
+```
+
+In the above example, only last `Comp` will be set in the `store`
+
+This is known limitation and vague idea for the solution is known, just not implemented as of now
+
 ### On a Side Note: Why
 
 out of curiosity
